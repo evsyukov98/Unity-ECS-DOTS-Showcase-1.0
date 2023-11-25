@@ -1,5 +1,4 @@
 using Unity.Entities;
-using Unity.Mathematics;
 using Unity.Transforms;
 
 /// <summary>
@@ -13,8 +12,8 @@ public partial class RotateSystem : SystemBase
     {
         // SystemAPI.Query<T>();  // это запросить все компоненты по типу T. Также есть перегрузки в виде <T,T,T ...> 
 
-        foreach ((RefRO<SpeedComponent> component, RefRW<LocalTransform> transform)
-            in SystemAPI.Query<RefRO<SpeedComponent>, RefRW<LocalTransform>>())
+        foreach ((RefRO<RotateSpeedComponent> component, RefRW<LocalTransform> transform)
+            in SystemAPI.Query<RefRO<RotateSpeedComponent>, RefRW<LocalTransform>>())
         {
             // ValueRW - запись
             // ValueRO - чтение
