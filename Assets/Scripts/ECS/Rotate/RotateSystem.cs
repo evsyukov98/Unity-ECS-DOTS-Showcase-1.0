@@ -17,7 +17,7 @@ public partial class RotateSystem : SystemBase
         {
             // ValueRW - запись
             // ValueRO - чтение
-            transform.ValueRW = transform.ValueRO.RotateY(component.ValueRO.value * SystemAPI.Time.DeltaTime);
+            transform.ValueRW = transform.ValueRO.RotateX(component.ValueRO.value * SystemAPI.Time.DeltaTime);
         }
     }
 }

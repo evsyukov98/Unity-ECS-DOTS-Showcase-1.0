@@ -7,16 +7,6 @@ public class RotateSpeedAuthoring : MonoBehaviour
     public float value;
 }
 
-// Наш "ECS - Component"
-public struct RotateSpeedComponent : IComponentData                          
-{
-    public float value;
-
-    public RotateSpeedComponent(float value)
-    {
-        this.value = value;
-    }
-}
 
 // Класс для прикрепления "Component" в "Entity". (Автоматически запускается при запуске игры)
 public class RotateSpeedBaker : Baker<RotateSpeedAuthoring>

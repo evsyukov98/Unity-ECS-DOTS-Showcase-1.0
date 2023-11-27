@@ -7,17 +7,6 @@ public class MovingSpeedAuthoring : MonoBehaviour
     public float value;
 }
 
-// Наш "ECS - Component"
-public struct MovingSpeedComponent : IComponentData
-{
-    public float value;
-    
-    public MovingSpeedComponent(float value)
-    {
-        this.value = value;
-    }
-}
-
 // Класс для прикрепления "Component" в "Entity". (Автоматически запускается при запуске игры)
 public class MovingSpeedBaker : Baker<MovingSpeedAuthoring>
 {
